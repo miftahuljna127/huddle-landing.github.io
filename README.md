@@ -1,2 +1,2 @@
-# huddle-landing.github.io
+# Huddle Landing Page
 Huddle responsive landing page
