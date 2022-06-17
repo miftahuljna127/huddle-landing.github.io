@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===================== Base ========================== */
+
+:root {
+  --clr-pink: hsl(322, 100%, 66%);
+  --clr-very-pale-cyan: hsl(193, 100%, 96%);
+  --clr-very-dark-cyan: hsl(192, 100%, 9%);
+  --clr-grayish-blue: hsl(208, 11%, 55%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --ff-poppins: 'Poppins', sans-serif;
+  --ff-opsans:  'Open Sans', sans-serif;
+
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  --header-height: 4rem;
+}
+
+body {
+  font-size: 18px;
+  font-family: var(--ff-opsans);
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-very-dark-cyan);
+}
+
+.btn {
+  padding: 10px 45px;
+  border-radius: 50px;
+  box-shadow: 0px 3px 10px rgba(128, 141, 153, .2);
+}
+
+.btn:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+/* ====================== Base Finish =========================== */
+
+/* ========================= Header =========================== */
+.header {
+  height: var(--header-height);
+  background-color: transparent;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+
+.header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: var(--header-height);
+}
+
+.nav .nav-logo {
+  max-width: 150px;
+}
+
+.nav .nav-list{
+  font-weight: var(--fw-700);
+}
+
+.nav-list .btn-try {
+  background-color: var(--clr-white);
+  font-size: .9rem;
+}
+
+/* ========================= Home ================================ */
+
+.home {
+  position: relative;
+  background-image: url(./images/bg-hero-desktop.svg);
+  background-color: var(--clr-very-pale-cyan);
+  min-height: 100vh;
+  padding: 6rem 0;
+}
+
+.home .container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home .home-left {
+  flex: 0 0 40%;
+}
+
+.home .home-right {
+  flex: 0 0 55%;
+}
+
+.home-left .title {
+  font-size: 2.5rem;
+  font-weight: var(--fw-700);
+  margin-bottom: 1.5rem;
+  font-family: var(--ff-poppins);
+}
+
+.home-left .subtitle {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: var(--fw-400);
+  margin-bottom: 2rem;
+  color: var(--clr-very-dark-cyan);
+}
+
+.home-left .btn-home{
+  background-color: var(--clr-pink);
+  text-align: center;
+  padding: .9rem 2.5rem;
+  width: 230px;
+  line-height: 0;
+}
+
+.btn-home a {
+  color: var(--clr-white);
+  font-size: .9rem;
+  line-height: 1rem;
+  font-weight: var(--fw-600);
+}
+
+/* ========================= Grow, conservation, user ================================ */
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+}
+
+.title-detail {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--clr-very-dark-cyan);
+}
+
+.subtitle-detail {
+  font-size: 1rem;
+  color: var(--clr-grayish-blue);
+  line-height: 1.6;
+}
+
+.grow {
+  margin-top: 6rem;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+
+.grow .detail-img,
+.conservation .detail-img,
+.users .detail-img {
+  width: 350px;
+  padding: 1.3rem 0;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0px 0px 5px rgba(128, 141, 153, .3);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.detail-left {
+  flex: 0 0 55%;
+  padding-left: 3.5rem;
+}
+
+.detail-right {
+  flex: 0 0 40%;
+}
+
+
+.section .text {
+  width: 80%;
+  text-align: left;
+}
+
+.users {
+  margin-bottom: 18rem;
+}
+
+/* ========================= Card Ready ================================ */
+.banner {
+  position: absolute;
+  width: 50%;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px rgba(128, 141, 153, .3);
+  margin: 0 auto;
+  bottom: -8%;
+  right: 25%;
+  transform: translateX(8%), translateY(-25%);
+  background-color: var(--clr-white);
+}
+
+.card {
+  padding: 3rem;
+  text-align: center;
+}
+
+.title-banner {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+.card .btn-home {
+  background-color: var(--clr-pink);
+  width: 50%;
+  text-align: center;
+  line-height: 0;
+  padding: 1.2rem 2.5rem;
+  margin: 16px auto;
+  box-shadow: 0px 5px 7px rgba(128, 141, 153, .3);
+}
+
+.card .btn-home a {
+  font-size: 1rem;
+}
+
+/* ========================= Footer ================================ */
+.footer {
+  background-color: var(--clr-very-dark-cyan);
+  padding: 7rem 0 0 0;
+  margin-top: 3rem;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+}
+
+.footer-info {
+  width: 370px;
+}
+
+.footer-detail .item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.item + .item {
+  margin-top: 1rem;
+}
+
+.item p {
+  color: var(--clr-white);
+  font-weight: var(--fw-400);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.footer-about,
+.footer-career {
+  font-size: 1rem;
+  line-height: 2.2;
+}
+
+.footer-about,
+.footer-career,
+.footer-media {
+  color: var(--clr-white);
+  font-weight: var(--fw-400);
+}
+
+.footer-media .social-media{
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+}
+
+.social-media .media-list {
+  padding: 5px 10px;
+  border-radius: 50px;
+  border: 1px solid var(--clr-white);
+}
+
+.social-media .media-list:hover {
+  color: var(--clr-pink);
+}
+
+.footer a {
+  color: var(--clr-white);
+}
+
+footer a:hover {
+  color: var(--clr-pink);
+}
+
+.footer > p {
+  color: var(--clr-white);
+  text-align: right;
+  margin-top: 1rem;
+  margin-right: 3rem;
+  font-size: .8rem;
+  padding-bottom: 3rem;
+}
+
+@media screen and (max-width: 1124px) {
+  .container {
+    max-width: 900px;
+  }
+
+  .users {
+    margin-bottom: 8rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .title-banner {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .card .btn-home a {
+    font-size: .8rem;
+  }
+}
+
+
+
+@media screen and (max-width: 900px) {
+  .header .container {
+    flex-direction: row;
+  }
+
+  .container{
+    padding: 1rem;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ================ Home ===================== */
+  .home .container {
+    margin-top: 2rem;
+  }
+
+  .home-left .title {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .home-left .subtitle {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .home-left .btn-home {
+    margin: 0 auto;
+  }
+
+  .home-right {
+    margin-top: 2rem;
+  }
+
+  /* ================ Grow, conservation, users ===================== */
+  .section .text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .detail-left,
+  .detail-right {
+    flex: 0 0 100%;
+    padding: 0;
+  }
+
+  .detail-right .align-right,
+  .detail-left .align-left {
+    text-align: center;
+  }
+  
+  .subtitle-detail {
+    text-align: center;
+  }
+
+  /* ================ Banner ===================== */
+  .banner {
+    width: 80%;
+    bottom: -8%;
+    right: 10%;
+    transform: translateX(8%), translateY(-10%);
+  }
+  
+  .title-banner {
+    font-size: 1.2rem;
+    margin: 1.2rem 0;
+  }
+  
+  .card .btn-home {
+    width: 50%;
+    padding: 1rem;
+  }
+  
+  .card .btn-home a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    max-width: 450px;
+  }
+
+  /* ================ Banner ===================== */
+  .title-banner {
+    font-size: 1rem;
+    margin: 1.2rem 0;
+  }
+  
+  .card .btn-home {
+    width: 50%;
+    padding: .5rem;
+  }
+  
+  .card .btn-home a {
+    font-size: 1rem;
+  }
+
+  /* ================ Footer ===================== */
+  .footer-wrap {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .footer-about {
+    margin: 1.5rem 0;
+  }
+
+  .footer-career {
+    margin-bottom: 1.5rem;
+  }
+
+
+}
